@@ -1,9 +1,10 @@
 #include <stdio.h>
 /**
- * prints HELLO WORLD
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
-printf("Hello,world");
 return (0);
 }
