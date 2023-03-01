@@ -5,6 +5,9 @@
  *@s: string to be converted
  *Return: 0 on success
  */
+#include <stdio.h>
+#include <limits.h>
+
 
 int _atoi(char *s)
 {
@@ -25,12 +28,21 @@ int _atoi(char *s)
 	else if (*s >= '0' && *s <= '9')
 	{
 	digit = *s - '0';
+
+	if (result > (INT_MAX - digit) / 10)
+	{
+
+	break;
+	}
+
 	result = result * 10 + digit;
 	}
 	else if (result > 0)
 	{
+
 	break;
 	}
+
 	s++;
 	}
 
