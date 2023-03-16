@@ -9,22 +9,22 @@
 
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-    void *ptr = NULL;
-    if (nmemb == 0 || size == 0)
-    {
-        return (NULL);
-    }
-    ptr = malloc(nmemb * size);
-    if (ptr == NULL)
-    {
-        return (NULL);
-    }
+	void *ptr = NULL;
+	if (nmemb == 0 || size == 0)
+	{
+		return (NULL);
+	}
+	ptr = malloc(nmemb * size);
+	if (ptr == NULL)
+	{
+		return (NULL);
+	}
 
-    ptr = calloc(nmemb, size);
-    if (ptr == NULL)
-    {
-        free(ptr);
-        return (NULL);
-    }
-    return (ptr);
+	ptr = calloc(nmemb, size);
+	if (ptr == NULL)
+	{
+		free(ptr);
+		return (NULL);
+	}
+	return (ptr);
 }
