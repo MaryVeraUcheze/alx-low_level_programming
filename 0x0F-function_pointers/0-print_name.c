@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * 0-print_name.c - functions that prints a name
+ * print_name - functions that prints a name
  * @name: name to print
  * @f: pointer
  */
