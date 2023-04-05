@@ -19,8 +19,8 @@ listint_t *add_nodeint_end(listint_t **head, const int n)
 	backblock->next = NULL;
 
 	if (*head == NULL)
-	*head = backblock;
-	
+	*head = backblock
+
 	else
 	{
 
@@ -30,5 +30,5 @@ listint_t *add_nodeint_end(listint_t **head, const int n)
 
 	temp->next = backblock;
 	}
-	return (*head);
+	return (backblock);
 }
