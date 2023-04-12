@@ -9,18 +9,19 @@
 
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-ssize_t a = 0, b = 0, c = 0;
-char *str
+	ssize_t a = 0, b = 0, c = 0;
+	char *str;
+
 	if (filename == NULL)
-	return (0);
+		return (0);
 
 	str = malloc(letters);
-	if(str == NULL)
+	if (str == NULL)
 		return (0);
 
 	a = open(filename, O_RDONLY);
 
-	b = read(b, str, letters);
+	c = read(b, str, letters);
 
 	str[letters] = '\0';
 
