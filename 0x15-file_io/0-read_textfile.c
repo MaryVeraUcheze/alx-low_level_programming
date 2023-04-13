@@ -9,31 +9,25 @@
 
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	ssize_t a = 0, b = 0, c = 0;
-	char *str;
+	ssize_t file, fread, fwrite;
+	char *totalSize;
 
+	totalSize = malloc(sizeof(char) * letters);
+	if (totalSize == NULL)
+		return (0);
 	if (filename == NULL)
 		return (0);
 
-	str = malloc(letters);
-	if (str == NULL)
+	file = open(filename, O_RDONLY);
+	if (file == -1)
 		return (0);
-
-	a = open(filename, O_RDONLY);
-
-	c = read(b, str, letters);
-
-	str[letters] = '\0';
-
-	a = write(STDOUT_FILENO, str, c);
-
-	if (a == -1 || b == -1 || c == -1)
-	{
-		free(str);
+	fread = read(file, totalSize, letters);
+	if (fread == -1)
 		return (0);
-	}
-	close(b);
-	free(str);
-
-	return (a);
+	fwrite = write(STDOUT_FILENO, totalSize, fread);
+	if (fwrite == -1)
+		return (0);
+	close(file);
+	free(totalSize);
+	return (fwrite);
 }
