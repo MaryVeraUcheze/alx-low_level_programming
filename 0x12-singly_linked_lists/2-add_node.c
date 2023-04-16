@@ -2,8 +2,8 @@
 
 /**
  * _strlen - this function return the length of a string
- * @s:string
- * Return: length of string
+ * @s: str
+ * Return: value
  */
 int _strlen(const char *s)
 {
@@ -16,24 +16,23 @@ int _strlen(const char *s)
 	}
 	return (i - 1);
 }
-
 /**
- * add_node -  adds a new node at the beginning of a list_t list.
- * @head:pointer
- * @str:pointer
- * Return:the address of the new element, or NULL if it failed
+ * add_node - this function adds a new node at the beginning
+ * @head: pointer to list
+ * @str: string to duplicate
+ * Return: address of the new element or NULL if fails
  */
 list_t *add_node(list_t **head, const char *str)
 {
-	list_t *new;
+	list_t *temp;
 
-	new = (list_t *) malloc(sizeof(list_t));
-	if (new == NULL)
+	temp = (list_t *) malloc(sizeof(list_t));
+	if (temp == NULL)
 		return (NULL);
-	new->str = strdup(str);
-	new->len = _strlen(str);
-	new->next = *head;
-	*head = new;
+	temp->str = strdup(str);
+	temp->len = _strlen(str);
+	temp->next = *head;
+	*head = temp;
 
 	return (*head);
 }
