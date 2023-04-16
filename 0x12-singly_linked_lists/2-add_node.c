@@ -1,8 +1,8 @@
 #include "lists.h"
-
 /**
  * _strlen - this function return the length of a string
- * @s: str
+ * @s: value
+ *
  * Return: value
  */
 int _strlen(const char *s)
