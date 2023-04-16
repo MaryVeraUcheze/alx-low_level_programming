@@ -35,10 +35,12 @@ list_t *add_node(list_t **head, const char *str)
 
 int _strlen(const char *s)
 {
-	unsigned int v;
+	char n;
+	int i;
 
-	for (v = 0; (s[v] != '\0'); v++)
+	for (i = 0; (n != '\0'); i++)
 	{
+		n = s[i];
 	}
-	return (v);
+	return (i - 1);
 }
