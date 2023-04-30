@@ -1,1 +1,0 @@
-Bit manipulation, also known as bitwise operations, is the process of manipulating the individual bits of a binary number. In computer programming, bitwise operations are often used to optimize code, perform low-level system programming tasks, and implement data structures
